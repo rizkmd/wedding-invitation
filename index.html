@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation — Rizka & Solace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── AUDIO ────────────────────────────────────────────── -->
+  <audio id="bgMusic" loop>
+    <source src="music.m4a" type="audio/mp4" />
+  </audio>
+  <button class="music-toggle" id="musicToggle" aria-label="Toggle music">
+    <span class="music-icon music-icon--play">♪</span>
+    <span class="music-icon music-icon--pause hidden">⏸</span>
+  </button>
+
+  <!-- ─── OPENING OVERLAY ──────────────────────────────────── -->
+  <div class="opening-overlay" id="openingOverlay">
+    <div class="envelope-wrapper">
+      <div class="envelope" id="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="envelope-letter" id="envelopeLetter">
+            <p class="letter-from">You are cordially invited</p>
+            <p class="letter-couple">Rizka &amp; Solace</p>
+            <p class="letter-date">31.10 — 01.11.2026</p>
+          </div>
+        </div>
+      </div>
+      <button class="open-btn" id="openBtn">Open Invitation</button>
+    </div>
+  </div>
+
+  <!-- ─── MAIN CONTENT ─────────────────────────────────────── -->
+  <div class="invitation-content" id="invitationContent">
+
+    <!-- ─── HERO ─────────────────────────────────────────────── -->
+    <section class="hero" id="hero">
+      <div class="floral-top"></div>
+      <div class="hero-inner">
+        <!-- <p class="bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p> -->
+        <p class="hero-greeting reveal">Together with our families, we joyfully invite you to celebrate the wedding of</p>
+        <h1 class="hero-names reveal">
+          <span class="groom-name">Rizka</span>
+          <span class="ampersand">&amp;</span>
+          <span class="bride-name">Solace</span>
+        </h1>
+        <p class="hero-fullnames reveal">Rizka Widodo, S.Kom &nbsp;·&nbsp; Solace Amerta, S.Hub.Int</p>
+        <div class="hero-date reveal">
+          <span class="date-line">31 October — 1 November 2026</span>
+          <span class="venue-line">Comic Frontier 23</span>
+          <span class="venue-line">ICE BSD, South Tangerang</span>
+        </div>
+        <div class="scroll-hint reveal">
+          <span>scroll down</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+      <div class="floral-bottom"></div>
+    </section>
+
+    <!-- ─── COUNTDOWN ────────────────────────────────────────── -->
+    <section class="countdown-section section reveal" id="countdown">
+      <div class="container">
+        <p class="section-label">Counting Down To</p>
+        <h2 class="section-title">The Big Day</h2>
+        <div class="countdown-grid">
+          <div class="countdown-item">
+            <span class="countdown-num" id="cd-days">--</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span class="countdown-num" id="cd-hours">--</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span class="countdown-num" id="cd-minutes">--</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span class="countdown-num" id="cd-seconds">--</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── THE COUPLE ───────────────────────────────────────── -->
+    <section class="couple-section section" id="couple">
+      <div class="container">
+        <p class="section-label reveal">Two Souls, One Heart</p>
+        <h2 class="section-title reveal">The Couple</h2>
+        <div class="couple-grid">
+          <div class="couple-card reveal">
+            <div class="couple-photo-wrap">
+              <img src="img/rizka.jpg" alt="Rizka Widodo, S.Kom" class="couple-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="couple-photo-placeholder" style="display:none">
+                <span>Groom Photo</span>
+              </div>
+            </div>
+            <div class="couple-role">The Groom</div>
+            <h3 class="couple-name">Rizka Widodo, S.Kom</h3>
+            <p class="couple-parents">Child of Mr. Joko &amp; Mrs. Iriana</p>
+          </div>
+
+          <div class="couple-divider reveal">
+            <span class="couple-divider-text">❧</span>
+          </div>
+
+          <div class="couple-card reveal">
+            <div class="couple-photo-wrap">
+              <img src="img/soles.jpg" alt="Solace Amerta, S.Hub.Int" class="couple-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="couple-photo-placeholder" style="display:none">
+                <span>Bride Photo</span>
+              </div>
+            </div>
+            <div class="couple-role">The Bride</div>
+            <h3 class="couple-name">Solace Amerta, S.Hub.Int</h3>
+            <p class="couple-parents">Child of Mr. Hieh &amp; Mr. Idoo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── OUR STORY ────────────────────────────────────────── -->
+    <section class="story-section section" id="story">
+      <div class="container">
+        <p class="section-label reveal">How It Began</p>
+        <h2 class="section-title reveal">Our Story</h2>
+        <div class="timeline">
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2023</span>
+              <h3 class="timeline-title">First Meeting</h3>
+              <p class="timeline-desc">Our paths crossed for the first time in YouTube.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2024</span>
+              <h3 class="timeline-title">Getting Closer</h3>
+              <p class="timeline-desc">From strangers to friends to something more.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2026</span>
+              <h3 class="timeline-title">The Proposal</h3>
+              <p class="timeline-desc">The question that changed everything.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2026</span>
+              <h3 class="timeline-title">Forever Begins</h3>
+              <p class="timeline-desc">We are finally tying the knot! Thank you for being part of our journey.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── EVENTS ───────────────────────────────────────────── -->
+    <section class="events-section section" id="events">
+      <div class="container">
+        <p class="section-label reveal">Join Us</p>
+        <h2 class="section-title reveal">The Ceremonies</h2>
+        <div class="events-grid">
+
+          <div class="event-card reveal">
+            <div class="event-icon">🌙</div>
+            <h3 class="event-name">Akad Nikah</h3>
+            <div class="event-detail">
+              <p class="event-date">Saturday, 31 October 2026</p>
+              <p class="event-time">08.00 WIB — 18.00 WIB</p>
+            </div>
+            <div class="event-divider"></div>
+            <div class="event-location">
+              <p class="event-venue">CF 23 Day 1</p>
+              <p class="event-venue">ICE BSD</p>
+              <p class="event-address">Jl. BSD Grand Boulevard, BSD City<br />Serpong, Tangerang Selatan, Banten</p>
+            </div>
+            <a href="https://maps.google.com/?q=ICE+BSD+Convention+Exhibition" target="_blank" rel="noopener" class="event-map-btn">View on Maps</a>
+          </div>
+
+          <div class="event-card reveal">
+            <div class="event-icon">✨</div>
+            <h3 class="event-name">Reception</h3>
+            <div class="event-detail">
+              <p class="event-date">Sunday, 1 November 2026</p>
+              <p class="event-time">08.00 WIB — 18.00 WIB</p>
+            </div>
+            <div class="event-divider"></div>
+            <div class="event-location">
+              <p class="event-venue">CF 23 Day 2</p>
+              <p class="event-venue">ICE BSD</p>
+              <p class="event-address">Jl. BSD Grand Boulevard, BSD City<br />Serpong, Tangerang Selatan, Banten</p>
+            </div>
+            <a href="https://maps.google.com/?q=ICE+BSD+Convention+Exhibition" target="_blank" rel="noopener" class="event-map-btn">View on Maps</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── VENUE / MAP ──────────────────────────────────────── -->
+    <section class="venue-section section" id="venue">
+      <div class="container">
+        <p class="section-label reveal">Location</p>
+        <h2 class="section-title reveal">ICE BSD</h2>
+        <p class="venue-address reveal">Jl. BSD Grand Boulevard, BSD City, Serpong, Tangerang Selatan, Banten 15339</p>
+        <div class="map-wrapper reveal">
+          <iframe
+            title="ICE BSD location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7282936097657!2d106.64890647499174!3d-6.301662093674513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb5cdc07c2f5%3A0x2e84bb0440e7e699!2sICE%20BSD!5e0!3m2!1sen!2sid!4v1716966000000!5m2!1sen!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <a href="https://goo.gl/maps/ICE+BSD" target="_blank" rel="noopener" class="btn-gold reveal">Open in Google Maps</a>
+      </div>
+    </section>
+
+    <!-- ─── GALLERY ──────────────────────────────────────────── -->
+    <section class="gallery-section section" id="gallery">
+      <div class="container">
+        <p class="section-label reveal">Moments</p>
+        <h2 class="section-title reveal">Our Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal" data-src="img/1.jpg">
+            <img src="img/1.jpg" alt="Gallery 1" onerror="this.parentElement.classList.add('gallery-placeholder')" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </div>
+          <div class="gallery-item reveal" data-src="img/2.jpg">
+            <img src="img/2.jpg" alt="Gallery 2" onerror="this.parentElement.classList.add('gallery-placeholder')" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </div>
+          <div class="gallery-item reveal" data-src="img/3.jpg">
+            <img src="img/3.jpg" alt="Gallery 3" onerror="this.parentElement.classList.add('gallery-placeholder')" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </div>
+          <div class="gallery-item reveal" data-src="img/4.jpg">
+            <img src="img/4.jpg" alt="Gallery 4" onerror="this.parentElement.classList.add('gallery-placeholder')" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </div>
+          <div class="gallery-item reveal" data-src="img/5.jpg">
+            <img src="img/5.jpg" alt="Gallery 5" onerror="this.parentElement.classList.add('gallery-placeholder')" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </div>
+          <div class="gallery-item reveal" data-src="img/6.jpg">
+            <img src="img/6.jpg" alt="Gallery 6" onerror="this.parentElement.classList.add('gallery-placeholder')" />
+            <div class="gallery-overlay"><span>+</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── LIGHTBOX ─────────────────────────────────────────── -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">&#x2715;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Gallery fullsize" />
+    </div>
+
+    <!-- ─── RSVP & WISHES ────────────────────────────────────── -->
+    <section class="rsvp-section section" id="rsvp">
+      <div class="container">
+        <p class="section-label reveal">Let Us Know</p>
+        <h2 class="section-title reveal">RSVP</h2>
+        <p class="rsvp-note reveal">Please confirm your attendance by <strong>15 October 2026</strong>.</p>
+        <!-- Replace YOUR_FORM_ID with your Formspree form ID from https://formspree.io -->
+        <form class="rsvp-form reveal" id="rsvpForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="rsvp-name">Full Name</label>
+            <input type="text" id="rsvp-name" name="name" placeholder="Enter your name" required />
+          </div>
+          <div class="form-group">
+            <label>Attendance Confirmation</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="attendance" value="Hadir" required /> Attending
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="attendance" value="Tidak Hadir" /> Not Attending
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="attendance" value="Masih Belum Tahu" /> Not Sure Yet
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="rsvp-message">Message &amp; Wishes</label>
+            <textarea id="rsvp-message" name="message" placeholder="Write your message and wishes for the couple..." rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-gold">Submit Confirmation</button>
+        </form>
+
+        <!-- ─── WISHES WALL ───────────────────────────────── -->
+        <div class="wishes-section reveal">
+          <h3 class="wishes-title">Messages &amp; Wishes</h3>
+          <div class="wishes-wall" id="wishesWall">
+            <!-- wishes rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── GIFT / HADIAH ────────────────────────────────────── -->
+    <section class="gift-section section" id="gift">
+      <div class="container">
+        <p class="section-label reveal">Wedding Gift</p>
+        <h2 class="section-title reveal">Gifts</h2>
+        <p class="gift-note reveal">
+          Your presence and blessings are the most cherished gifts for us.<br />
+          However, if you wish to give a gift, here are the accounts you can use:
+        </p>
+        <div class="gift-cards reveal">
+          <div class="gift-card">
+            <div class="gift-bank">QRIS</div>
+            <div class="gift-account-name">Rizka</div>
+              <img src="img/qris.jpg" alt="QRIS Rizka" class="qris-img" />
+              <a href="img/qris.jpg" download="QRIS-Rizka.jpg" class="copy-btn">Download QRIS</a>
+          </div>
+          <div class="gift-card">
+            <div class="gift-bank">Trakteer</div>
+            <div class="gift-account-name">Solace Amerta</div>
+            <img src="img/trakteer.png" alt="Trakteer Solace" class="trakteer-img" />
+            <a href="https://trakteer.id/solaceamerta" target="_blank" rel="noopener" class="copy-btn">Send Trakteer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FOOTER ───────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="floral-footer"></div>
+      <div class="container">
+        <!-- <p class="footer-bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p> -->
+        <h2 class="footer-names">Rizka &amp; Solace</h2>
+        <p class="footer-date">31 October — 1 November 2026</p>
+        <p class="footer-msg">
+          It is an honor and a joy for us if you could attend
+          to give your blessings to the couple.<br /><br />
+          <!-- Wassalamu'alaikum Warahmatullahi Wabarakatuh. -->
+        </p>
+        <p class="footer-credit">Made with ❤ — 2026</p>
+      </div>
+    </footer>
+
+  </div><!-- end .invitation-content -->
+
+  <script src="script.js"></script>
+</body>
+</html>
